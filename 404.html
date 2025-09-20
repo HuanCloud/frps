@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>欢云 FRPS 内网穿透服务</title>
+  <!-- 引入 Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-8 px-4">
+
+  <div class="max-w-3xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
+    
+    <!-- 头部标题 -->
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-6 px-8">
+      <a href="https://huancloud.cn/" target="_blank"><img src="https://huancloud.cn/themes/web/huancloud/imgs/LOGO.svg" alt="" srcset="" class="h-10 mb-2 mx-auto"></a>
+      <h1 class="text-3xl font-bold text-center">FRPS 内网穿透服务</h1>
+      <p class="text-blue-100 text-center mt-2">安全稳定，轻松实现内网穿透</p>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="p-8 space-y-6">
+
+      <!-- 服务器信息 -->
+      <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          服务器配置信息
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+          <li><strong>服务器 IP:</strong> <span class="font-mono text-green-600">frp.huancloud.cn</span></li>
+          <li><strong>FRPS 端口:</strong> <span class="font-mono text-green-600">7000</span></li>
+          <li><strong>Token 认证:</strong> <span class="font-mono text-red-600 break-all"><a href="http://t.me/huan_cloud" target="_blank">TG群里获取</a></span></li>
+          <li><strong>HTTP/HTTPS 固定端口:</strong> <span class="font-mono text-blue-600">80, 443</span></li>
+          <li><strong>动态端口范围:</strong> 
+            <span class="font-mono text-purple-600">10001 ~ 50000</span>
+            （共 40000 个可用端口）
+          </li>
+        </ul>
+      </div>
+
+      <!-- 注意事项 -->
+      <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+        <h2 class="text-xl font-semibold text-yellow-800 mb-4 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          注意事项
+        </h2>
+        <ul class="list-disc list-inside text-yellow-800 space-y-2 text-sm">
+          <li>请妥善保管 Token，泄露可能导致服务被滥用。</li>
+          <li>禁止用于非法用途（如外挂、挖矿、传播病毒等），一经发现将封禁账号。</li>
+          <li>HTTP/HTTPS 服务需要绑定域名。</li>
+          <li>端口由系统分配，请勿重复使用或冲突配置。</li>
+          <li>连接不稳定时，请检查本地防火墙及 frpc 配置文件是否正确。</li>
+          <li>本服务仅供学习与测试使用，请遵守相关法律法规。</li>
+        </ul>
+      </div>
+
+      <!-- 客户端下载 -->
+      <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+        <h2 class="text-xl font-semibold text-green-800 mb-4 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+          </svg>
+          FRPC 客户端下载
+        </h2>
+        <p class="text-green-700 mb-4">点击下方链接下载对应平台的 FRPC 客户端：</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <a href="https://github.com/fatedier/frp/releases/latest" target="_blank" class="block bg-white text-blue-600 hover:bg-blue-50 py-2 px-4 rounded border text-center font-medium transition">
+            🖥️ Windows (frpc.exe)
+          </a>
+          <a href="https://github.com/fatedier/frp/releases/latest" target="_blank" class="block bg-white text-blue-600 hover:bg-blue-50 py-2 px-4 rounded border text-center font-medium transition">
+            🐧 Linux (frpc)
+          </a>
+          <a href="https://github.com/fatedier/frp/releases/latest" target="_blank" class="block bg-white text-blue-600 hover:bg-blue-50 py-2 px-4 rounded border text-center font-medium transition">
+            🍎 macOS (frpc)
+          </a>
+          <a href="https://github.com/fatedier/frp/releases/latest" target="_blank" class="block bg-white text-blue-600 hover:bg-blue-50 py-2 px-4 rounded border text-center font-medium transition">
+            📦 所有版本 (GitHub Release)
+          </a>
+        </div>
+        <p class="text-xs text-green-600 mt-3">
+          建议使用最新版 FRP 客户端以确保兼容性和安全性。
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 底部版权 -->
+    <div class="bg-gray-100 py-4 px-8 text-center text-gray-500 text-sm border-t">
+      &copy; 2025 欢云
+    </div>
+
+  </div>
+
+</body>
+</html>
